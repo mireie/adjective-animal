@@ -1,8 +1,11 @@
 function phrase() {
   const letter = pickLetter()
   const adjective = pickAdjective(letter)
-  const animal = findAnimal(letter)
-  document.getElementById('result').innerHTML = `${adjective} ${animal}`
+  const animal = pickAnimal(letter)
+  if(animal === undefined || adjective === undefined) {
+    phrase();
+  }
+  document.getElementById('result').innerHTML = `${adjective.toLocaleLowerCase()} ${animal.toLocaleLowerCase()}`
 }
 
 function pickLetter() {
@@ -1111,10 +1114,10 @@ function pickAdjective(letter) {
     'zonked',
   ]
   const aAdjectives = adjectives.filter(adjective => adjective.toLowerCase().charAt(0).toLowerCase() === letter)
-  return aAdjectives[Math.floor(Math.random() * aAdjectives.length)].toLowerCase()
+  return aAdjectives[Math.floor(Math.random() * aAdjectives.length)]
 }
 
-function findAnimal(letter) {
+function pickAnimal(letter) {
   const animals = [
     "Aardvark",
     "Albatross",
@@ -1342,7 +1345,7 @@ function findAnimal(letter) {
     "Zebra"
   ]
   const aAnimals = animals.filter(animal => animal.charAt(0).toLowerCase() === letter)
-  return aAnimals[Math.floor(Math.random() * aAnimals.length)].toLowerCase()
+  return aAnimals[Math.floor(Math.random() * aAnimals.length)]
 }
 
 document.addEventListener('click', function (event) {
