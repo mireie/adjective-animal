@@ -8,15 +8,20 @@
   <title>Namer</title>
 </head>
 <body>
-  <div class="container ">
-    <div class="phrase-container ">
+  <div class="container">
+    <div class="phrase-container">
       <h1>Here's a name:</h1>
       <span id="result"></span>
       <div id="try-again">Hit the box for another name</div>
     </div>
   </div>
   <script>
+    // Boy, wasn't old JavaScript fun?
     phrase();
+
+    document.addEventListener('click', function(event) {
+      phrase();
+    });
   </script>
 </body>
 </html>

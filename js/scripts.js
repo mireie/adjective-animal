@@ -1344,3 +1344,16 @@ function findAnimal(letter) {
   const aAnimals = animals.filter(animal => animal.charAt(0).toLowerCase() === letter)
   return aAnimals[Math.floor(Math.random() * aAnimals.length)].toLowerCase()
 }
+
+document.addEventListener('click', function (event) {
+
+	// If the clicked element doesn't have the right selector, bail
+	if (!event.target.matches('.click-me')) return;
+
+	// Don't follow the link
+	event.preventDefault();
+
+	// Log the clicked element in the console
+	console.log(event.target);
+
+}, false);
