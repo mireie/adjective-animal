@@ -1,16 +1,16 @@
 function phrase() {
-  const letter = pickLetter()
+  const animal = pickAnimal()
+  const letter = animal[0].toLocaleLowerCase()
   const adjective = pickAdjective(letter)
-  const animal = pickAnimal(letter)
-  if(animal === undefined || adjective === undefined) {
-    phrase();
-  }
+ 
   document.getElementById('result').innerHTML = `${adjective.toLocaleLowerCase()} ${animal.toLocaleLowerCase()}`
 }
 
-function pickLetter() {
-  const letters = "abcdefghijklmnopqrstuvwxyz"
-  return letters[Math.floor(Math.random() * letters.length)]
+function assemblePhrase(letter) {
+  const animal = pickAnimal(letter)
+  const adjective = pickAdjective(letter)
+  
+  return `${adjective.toLocaleLowerCase()} ${animal.toLocaleLowerCase()}`
 }
 
 function pickAdjective(letter) {
@@ -1117,7 +1117,7 @@ function pickAdjective(letter) {
   return aAdjectives[Math.floor(Math.random() * aAdjectives.length)]
 }
 
-function pickAnimal(letter) {
+function pickAnimal() {
   const animals = [
     "Aardvark",
     "Albatross",
@@ -1344,8 +1344,7 @@ function pickAnimal(letter) {
     "Yak",
     "Zebra"
   ]
-  const aAnimals = animals.filter(animal => animal.charAt(0).toLowerCase() === letter)
-  return aAnimals[Math.floor(Math.random() * aAnimals.length)]
+  return animals[Math.floor(Math.random() * animals.length)]
 }
 
 document.addEventListener('click', function (event) {
