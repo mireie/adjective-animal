@@ -8,10 +8,10 @@
   <title>Adjective Animal</title>
 </head>
 <body>
-  <div class="container click-me">
+  <div class="container">
     <div class="phrase-container">
       <h1>Here's a name:</h1>
-      <span class="display-4 mb-3" id="result"></span>
+      <span class="display-4 mb-3 result" id="result"></span>
       <div id="try-again" class="mt-3 mb-3">Click anywhere for another name</div>
       <button class="btn btn-primary mt-3" id="notification" onclick="copyName()">Copy Name</button>
     </div>
@@ -21,7 +21,7 @@
     phrase();
 
     document.addEventListener('click', function(event) {
-      if (event.target.classList.contains('btn')) {
+      if (event.target.classList.contains('btn') || event.target.classList.contains('result')) {
         return;
       }
       phrase();
