@@ -13,6 +13,20 @@ function assemblePhrase(letter) {
   return `${adjective.toLocaleLowerCase()} ${animal.toLocaleLowerCase()}`
 }
 
+function copyName() {
+  const copyText = document.getElementById('result').textContent
+  navigator.clipboard.writeText(copyText)
+  notifyCopy()
+}
+
+function notifyCopy() {
+  const notification = document.getElementById('notification')
+  notification.innerHTML = 'Copied to clipboard!'
+  setTimeout(() => {
+    notification.innerHTML = 'Copy Name'
+  }, 2000)
+}
+
 function pickAdjective(letter) {
   const adjectives = [
     'aback',
@@ -1346,16 +1360,3 @@ function pickAnimal() {
   ]
   return animals[Math.floor(Math.random() * animals.length)]
 }
-
-document.addEventListener('click', function (event) {
-
-	// If the clicked element doesn't have the right selector, bail
-	if (!event.target.matches('.click-me')) return;
-
-	// Don't follow the link
-	event.preventDefault();
-
-	// Log the clicked element in the console
-	console.log(event.target);
-
-}, false);

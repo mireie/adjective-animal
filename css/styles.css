@@ -15,11 +15,12 @@ body {
   justify-content: center;
   display: flex;
   padding-top: 2rem;
-  height:100%;overflow:hidden;
+  height:100%;
+  overflow:hidden;
+  background-color: #ffc300;
 }
 
-#random-phrase {
-  font-size: 7rem;
+#result {
   clear: both;
 }
 
@@ -35,4 +36,8 @@ body, html {
 .tiny {
   font-size: 5rem;
   vertical-align: super;
+}
+
+#notification {
+  clear: both;
 }
