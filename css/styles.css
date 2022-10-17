@@ -3,23 +3,18 @@ body {
   color: #000814;
 }
 
-.phrase-container {
-  background-color: #ffc300;
-  text-align: center;
-  padding: 2rem;
-  min-width:320px;
-}
-
 .container {
-  align-items:flex-start;
-  justify-content: center;
   display: flex;
-  padding-top: 2rem;
+  flex-direction: column;
+  padding: 2rem;
   height:100%;
   overflow:hidden;
   background-color: #ffc300;
 }
 
+#title {
+  height: 4rem;
+}
 #result {
   clear: both;
 }
@@ -32,12 +27,4 @@ body, html {
   height: 100%;
   overflow:hidden;
   margin:0;
-}
-.tiny {
-  font-size: 5rem;
-  vertical-align: super;
-}
-
-#notification {
-  clear: both;
 }

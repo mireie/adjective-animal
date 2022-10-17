@@ -1335,6 +1335,7 @@ export const adjectiveList = [
   'writhing',
   'wrong',
   'wry',
+  'x-rayed',
   'yawning',
   'yearly',
   'yellow',

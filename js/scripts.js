@@ -16,7 +16,7 @@ function copyName() {
 }
 
 function notifyCopy() {
-  const previousText = document.getElementById('try-again').textContent
+  const previousText = "Click the animal name to copy, click anywhere else for another name."
   const notification = document.getElementById('try-again')
   notification.innerHTML = 'Copied to clipboard!'
   setTimeout(() => {
