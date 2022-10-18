@@ -24,9 +24,8 @@ function notifyCopy() {
   }, 2000)
 }
 
-function setTitle() {
-  const title = document.getElementById('title')
-  title.innerHTML = "Here's an " + pickAdjective('a') + ' animal:'
+function setTitleAdjective() {
+  document.getElementById('title-adjective').innerHTML = pickAdjective('a')
 }
 
 function pickAdjective(letter) {
@@ -40,4 +39,4 @@ function pickAnimal() {
   return animals[Math.floor(Math.random() * animals.length)]
 }
 
-export { copyName, setTitle, phrase }
+export { copyName, setTitleAdjective, phrase }

@@ -11,13 +11,13 @@
 
 <body onselectstart="return false">
   <div class="container">
-      <h1 id="title"></h1>
+      <h1 id="title">Here's an <span id="title-adjective"></span> animal:</h1>
       <span class="display-4 result" id="result"></span>
       <div id="try-again" class="mt-3 mb-3">Click the animal name to copy, click anywhere else for another name.</div>
   </div>
   <script type="module">
-    import { setTitle, phrase, copyName } from './js/scripts.js';
-    setTitle();
+    import { setTitleAdjective, phrase, copyName } from './js/scripts.js';
+    setTitleAdjective();
     phrase();
 
     let clickCounter = 0;
@@ -29,7 +29,7 @@
       }
       clickCounter++;
       if (clickCounter % 3 === 0) {
-        setTitle();
+        setTitleAdjective();
       }
       if (event.target.id !== 'result') {
         phrase();
