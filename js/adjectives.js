@@ -36,7 +36,6 @@ export const adjectiveList = [
   'alert',
   'alienated',
   'alive',
-  'all',
   'altruistic',
   'amazing',
   'ambitious',
