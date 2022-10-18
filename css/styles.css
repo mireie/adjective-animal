@@ -6,15 +6,22 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
   height:100%;
   overflow:hidden;
   background-color: #ffc300;
 }
 
 #title {
-  height: 4rem;
+  position: relative;
+  min-height: 5rem;
 }
+
+#title h1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 #result {
   clear: both;
 }
